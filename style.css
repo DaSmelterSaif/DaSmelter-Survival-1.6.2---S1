@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
 /* https://fonts.google.com/specimen/Ubuntu?stroke=Sans+Serif */
 
 * {
@@ -6,17 +6,45 @@
   padding: 0;
 }
 
-/* TODO - Choose main color and secondary color. 
-These colors are temporary and are not being used. */
 :root {
-  --main-color: red;
-  --secondary-color: blue;
+  --main-color: hsl(130, 100%, 50%);
+  --secondary-color: hsl(0, 100%, 50%);
+  --navbar-height: 9vh;
 }
 
-p {
-  margin: 60px 10px;
+p,
+li {
   font-family: 'Kanit', sans-serif;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+div,
+header,
+section,
+footer {
+  padding: 10px;
+}
+
+div {
+  background-color: var(--main-color);
+  margin: 20px;
+  max-width: 75ch;
+  border-radius: 10px 0 10px 0;
 }
 
 nav {
@@ -25,24 +53,68 @@ nav {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  height: var(--navbar-height);
 }
 
+/* TODO - Center the logo vertically */
 .logo {
-  width: 270px;
-  height: 50px;
+  aspect-ratio: 27 / 5;
+  height: var(--navbar-height);
   position: absolute;
-  left: -30px;
+  left: 0;
 }
 
 .navbar li {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   float: left;
   list-style-type: none;
   padding: 20px 60px;
-  background-color: rgb(194, 0, 0);
-  transition: color 50ms, background-color 50ms;
+  background-color: black;
+  color: var(--main-color);
+  transition: color 60ms, background-color 60ms;
+  height: var(--navbar-height);
 }
 
 li:hover {
-  background-color: blue;
-  color: white;
+  background-color: var(--main-color); 
+  color: black;
+}
+
+.sec1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--secondary-color);
+  height: 20vh;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 1450px) {
+  nav {
+    justify-content: right;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  nav {
+    justify-content: center;
+  }
+  .navbar li {
+    float:none;
+    display: none;
+  }
+  .logo {
+    position: static;
+  }
 }
