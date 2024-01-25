@@ -12,6 +12,7 @@
   --navbar-height: 9vh;
 }
 
+/* ________ General Styles ________ */
 p,
 li {
   font-family: "Kanit", sans-serif;
@@ -47,6 +48,7 @@ div {
   border-radius: 10px 0 10px 0;
 }
 
+/* ________ Navbar ________ */
 nav {
   background-color: black;
   width: 100%;
@@ -59,11 +61,20 @@ nav {
 .logo {
   aspect-ratio: initial;
   height: var(--navbar-height);
+  max-width: 70vw;
+  object-fit: contain;
   position: absolute;
   left: 0;
 }
 
+a:has(.logo) {
+  display: flex;
+  justify-content: center;
+}
+
 .hamburger {
+  aspect-ratio: initial;
+  height: var(--navbar-height);
   filter: invert(1);
   display: none;
   cursor: pointer;
@@ -95,6 +106,7 @@ nav {
   background-color: var(--main-color);
 }
 
+/* ________ Body ________ */
 .sec1 {
   display: flex;
   justify-content: center;
@@ -102,6 +114,7 @@ nav {
   flex-direction: column;
 }
 
+/* ________ Footer ________ */
 footer {
   display: flex;
   align-items: flex-end;
@@ -113,18 +126,19 @@ footer a {
   color: white;
 }
 
-/* TODO - style the a element for all cases (active, visited, etc.) */
-footer a:active {
-  color: hsl(0, 0%, 60%);
-}
-
 footer a:visited {
   color: hsl(250, 100%, 70%);
+}
+
+footer a:active {
+  color: hsl(0, 0%, 60%);
 }
 
 footer p {
   margin: 10px 0;
 }
+
+/* ________ Media queries ________ */
 
 @media only screen and (max-width: 1450px) {
   nav {
