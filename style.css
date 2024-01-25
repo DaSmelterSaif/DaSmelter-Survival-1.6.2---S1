@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
 /* https://fonts.google.com/specimen/Ubuntu?stroke=Sans+Serif */
 
 * {
@@ -14,8 +14,8 @@
 
 p,
 li {
-  font-family: 'Kanit', sans-serif;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
 }
 
@@ -56,30 +56,43 @@ nav {
   height: var(--navbar-height);
 }
 
-/* TODO - Center the logo vertically */
 .logo {
-  aspect-ratio: 27 / 5;
+  aspect-ratio: initial;
   height: var(--navbar-height);
   position: absolute;
   left: 0;
 }
 
+.hamburger {
+  filter: invert(1);
+  display: none;
+  cursor: pointer;
+}
+
 .navbar li {
+  float: left;
+  list-style-type: none;
+}
+
+.navbar li:hover {
+  background-color: var(--main-color);
+}
+
+.navbar a {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  float: left;
-  list-style-type: none;
   padding: 20px 60px;
-  background-color: black;
   color: var(--main-color);
+  background-color: black;
   transition: color 60ms, background-color 60ms;
   height: var(--navbar-height);
+  text-decoration: none;
 }
 
-li:hover {
-  background-color: var(--main-color); 
+.navbar a:hover {
   color: black;
+  background-color: var(--main-color);
 }
 
 .sec1 {
@@ -96,6 +109,19 @@ footer {
   height: 20vh;
 }
 
+footer a {
+  color: white;
+}
+
+/* TODO - style the a element for all cases (active, visited, etc.) */
+footer a:active {
+  color: hsl(0, 0%, 60%);
+}
+
+footer a:visited {
+  color: hsl(250, 100%, 70%);
+}
+
 footer p {
   margin: 10px 0;
 }
@@ -107,11 +133,14 @@ footer p {
 }
 
 @media only screen and (max-width: 1200px) {
+  .hamburger {
+    display: initial;
+  }
   nav {
     justify-content: center;
   }
   .navbar li {
-    float:none;
+    float: none;
     display: none;
   }
   .logo {

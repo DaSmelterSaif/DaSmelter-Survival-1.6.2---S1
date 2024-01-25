@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="Script.js"></script>
     <title>DaSmelter 1.6.2 (S1) - Homepage</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
+    <!-- TODO - Commit changes as soon as done -->
     <nav>
-      <img class="logo" src="img/Logo.png" />
+      <img
+        src="img/Hamburger.png"
+        alt="Hamburger button"
+        onclick="hambShow()"
+        class="hamburger"
+      />
+      <a href="index.html"
+        ><img class="logo" src="img/Logo.png" alt="Logo"
+      /></a>
       <ul class="navbar">
-        <li>Home</li>
-        <li>Gallery</li>
-        <li>How to Join</li>
-        <li>About</li>
+        <li class="jsLi"><a href="index.html">Home</a></li>
+        <li class="jsLi"><a href="">Gallery</a></li>
+        <li class="jsLi"><a href="">How to Join</a></li>
+        <li class="jsLi"><a href="">About</a></li>
       </ul>
     </nav>
 
@@ -200,5 +209,6 @@
         Made by <a href="https://github.com/DaSmelterSaif">DaSmelterSaif</a>
       </p>
     </footer>
+    <script type="text/javascript" src="Script.js"></script>
   </body>
 </html>
