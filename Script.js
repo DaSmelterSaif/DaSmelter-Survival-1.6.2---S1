@@ -1,8 +1,10 @@
 const navbarElements = document.querySelectorAll(".jsLi");
 
-console.log(navbarElements);
+const hamburger = document.querySelector(".hamburger");
 
 let hambHidden = true;
+
+
 
 function hambShow() {
   if(hambHidden == true) {

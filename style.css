@@ -52,10 +52,10 @@ div {
 nav {
   background-color: black;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden;/**/
   display: flex;
-  justify-content: center;
-  height: var(--navbar-height);
+  justify-content: center;/**/
+  height: var(--navbar-height);/**/
 }
 
 .logo {
@@ -147,17 +147,52 @@ footer p {
 }
 
 @media only screen and (max-width: 1200px) {
-  .hamburger {
+  /* .hamburger {
     display: initial;
   }
   nav {
-    justify-content: center;
+    overflow: initial;
+    display: initial;
+    height: initial;
   }
   .navbar li {
     float: none;
     display: none;
   }
   .logo {
-    position: static;
+    position: initial;
+    height: initial;
+  } */
+  nav {
+    background-color: black;
+    overflow: initial;
+    height: initial;
+  }
+  
+  .logo {
+    object-fit: contain;
+    display: block;
+    position: initial;
+  }
+  
+  .hamburger {
+    height: var(--navbar-height);
+    filter: invert(1);
+    display: initial;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    width: 100%;
+  }
+  
+  .navbar li {
+    list-style-type: none;
+    float: none;
+    display: none;
+  }
+  
+  .navbar li:hover {
+    background-color: var(--main-color);
   }
 }
